@@ -1,0 +1,473 @@
+/* Main Styles */
+:root {
+    --primary-color: #006838;
+    --secondary-color: #4CAF50;
+    --text-color: #333;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('assets/fonts/Kanit/Kanit-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* กำหนดหัวข้อ */
+.heading-text h4{
+    font-family: 'Kanit', sans-serif;
+}
+
+.login-link-item h6 ,.quick-link-item h6 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300; /* น้ำหนักของฟอนต์ */
+    font-size: 1.3rem;
+}
+/* กำหนดตัวหนังสือข่าว */
+p{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300; /* น้ำหนักของฟอนต์ */
+}
+
+.underlineHalf {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.underlineHalf::after {
+    content: '';
+    display: block;
+    width: 50%; /* กำหนดความยาวเส้นเป็น 50% */
+    height: 3px; /* ความหนาของเส้น */
+    background-color: #4CAF50; /* สีของเส้น */
+    margin: 0 auto; /* จัดเส้นให้อยู่ตรงกลาง */
+    margin-top: 5px; /* ระยะห่างระหว่างข้อความกับเส้น */
+}
+
+.underlineFull {
+    padding-bottom: 10px;
+}
+
+.underlineFull::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px; /* ความหนาของเส้น */
+    background-color: #4CAF50; /* สีของเส้น */
+    margin-top: 5px; /* ระยะห่างระหว่างข้อความและเส้น */
+}
+
+/* Navigation Styles */
+.top-nav {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300; /* น้ำหนักของฟอนต์ */
+    background-color: var(--primary-color) !important;
+}
+
+/* สีปุ่มค้นหา*/
+button img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+/* ปุ่มค้นหาเมื่อ Hover */
+button img:hover {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 60px; /* ปรับขนาดโลโก้ */
+    margin-right: 15px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.text-thai {
+    font-size: 1.2rem; /* ขนาดตัวอักษรภาษาไทย */
+    font-weight: bold;
+    color: #fff;
+}
+
+.text-english {
+    font-size: 1.2rem; /* ขนาดตัวอักษรภาษาอังกฤษ */
+    color: #fff;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300; /* น้ำหนักของฟอนต์ */
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+}
+
+.main-nav .nav-link {
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+}
+
+.main-nav .nav-link:hover {
+    color: #4CAF50;
+}
+
+.dropdown-menu {
+    display: none;
+}
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300; /* น้ำหนักของฟอนต์ */
+}
+
+.dropdown-menu a:hover{
+    color: #4CAF50;
+}
+
+.dropdown-menu a:active{
+    background-color: #4CAF50;
+    color: #FFF;
+}
+
+/* เมนูย่อยในเมนูย่อย (Nested Dropdown) */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%; /* จัดให้เมนูย่อยอยู่ทางขวา */
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.dropdown-item {
+    font-size: 1.2rem;
+}
+
+/* tootip */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* แสดงข้อความด้านบน */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+ 
+/* banner */
+.banner {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300; /* น้ำหนักของฟอนต์ */
+    width: 100%; /* ความกว้างเต็มจอ */
+    height: auto; /* ความสูงปรับตามสัดส่วนของรูป */
+    overflow: hidden; /* ซ่อนส่วนที่เกินจาก container */
+}
+
+.carousel-item img {
+    width: 100%; /* ความกว้างเต็มจอ */
+    height: auto; /* ความสูงเต็ม container */
+    object-fit: cover; /* ทำให้ภาพครอบพื้นที่และตัดส่วนเกิน */
+    object-position: center; /* จัดตำแหน่งภาพให้อยู่ตรงกลาง */
+    display: block; /* ลบช่องว่างด้านล่างของ <img> */
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* News Section */
+.news {
+    font-family: 'Kanit', sans-serif;
+}
+.news-card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; /* หรือใช้ inline-block ถ้าต้องการ */
+    max-width: 100%; /* ปรับตามขนาดที่ต้องการ */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Calendar*/
+.calendar-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* login link */
+.login-links {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-link-item {
+    text-align: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.login-link-item:hover {
+    transform: translateY(-5px);
+}
+
+.login-link-link {
+    display: block; /* ทำให้ครอบทั้งพื้นที่ */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีเดียวกับข้อความปกติ */
+    transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เวลาโฮเวอร์ */
+}
+
+.login-link-link:hover img {
+    transform: translateY(-2px); /* ยกภาพขึ้นเล็กน้อย */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.login-link-link img {
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม transition เพื่อให้ดูนุ่มนวล */
+}
+
+
+.login-link-link:hover {
+    color: #4CAF50; /* เปลี่ยนสีเมื่อโฮเวอร์ */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+}
+
+.login-link-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.news-link-item {
+    transition: transform 0.3s ease;
+}
+
+.news-link-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-link-link {
+    display: block; /* ทำให้ครอบทั้งพื้นที่ */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีเดียวกับข้อความปกติ */
+    transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เวลาโฮเวอร์ */
+}
+
+.news-link-link:hover {
+    color: #4CAF50;
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+}
+
+.btn-news-all {
+    background-color: #008848;
+    color: #FFF;
+    font-size: 18px; /* ขนาดตัวอักษร */
+    padding: 8px 20px; /* ระยะห่างภายในปุ่ม */
+    border-radius: 5px; /* ความโค้งของขอบ */
+    display: inline-block; /* ทำให้ปุ่มเป็น block ที่มีขนาดคงที่ */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* เพิ่มเอฟเฟกต์นุ่มนวล */
+}
+
+.btn-news-all:hover {
+    background-color: #4CAF50;
+    color: #FFF;
+    text-decoration: none; /* ลบเส้นใต้เมื่อโฮเวอร์ */
+    transform: translateY(-5px); /* ขยับขึ้น 5px เมื่อโฮเวอร์ */
+}
+
+.quick-links {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงในแนวนอน */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    flex-wrap: wrap; /* ถ้าพื้นที่ไม่พอให้ขึ้นบรรทัดใหม่ */
+    padding: 20px;
+}
+
+.quick-link-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* ทำให้มุมกลม */
+    padding: 20px; /* เพิ่มระยะห่างระหว่างขอบกรอบและเนื้อหา */
+}
+
+.quick-link-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* เงา */
+}
+
+.quick-link-link {
+    display: block; /* ทำให้ครอบทั้งพื้นที่ */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีเดียวกับข้อความปกติ */
+    transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เวลาโฮเวอร์ */
+}
+
+.quick-link-link:hover {
+    color: #4CAF50;
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+}
+
+.quick-link-item img {
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    filter: invert(35%) sepia(96%) saturate(533%) hue-rotate(95deg) brightness(93%) contrast(91%);
+    transition: filter 0.3s ease; /* เพิ่ม transition ให้ดูนุ่มนวล */
+}
+
+.quick-link-item:hover img {
+    filter: invert(46%) sepia(83%) saturate(1378%) hue-rotate(72deg) brightness(90%) contrast(85%);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: auto;
+}
+
+@media (max-width: 996px) {
+    .login-link-item h6 ,.quick-link-item h6 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px; 
+    }
+    .form-inline input {
+        width: 80%; /* ย่อความกว้างของช่องค้นหา */
+    }
+
+    .text-thai {
+        font-size: 1.1rem; /* ขนาดตัวอักษรภาษาไทย */
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .text-english {
+        font-size: 1.1rem; /* ขนาดตัวอักษรภาษาอังกฤษ */
+        color: #fff;
+    }
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+      
+    .news-card {
+        margin-bottom: 15px;
+    }
+
+    .quick-link-item {
+        margin-bottom: 10px;
+    }
+
+    .quick-link-item img {
+        width: 100%;
+    }
+
+    .login-link-item h6 ,.quick-link-item h6 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .carousel-item img {
+        height: 220px;
+    }
+    .login-link-item h6 ,.quick-link-item h6 {
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media (max-width: 375px) {
+
+    .form-inline input {
+        width: 80%; /* ย่อความกว้างของช่องค้นหา */
+    }
+
+    .text-thai {
+        font-size: 0.8rem; /* ขนาดตัวอักษรภาษาไทย */
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .text-english {
+        font-size: 0.8rem; /* ขนาดตัวอักษรภาษาอังกฤษ */
+        color: #fff;
+    }
+    
+    .carousel-item img {
+        height: 150px;
+    }
+        .login-link-item h6 ,.quick-link-item h6 {
+        font-size: 1rem;
+    }
+    
+}
