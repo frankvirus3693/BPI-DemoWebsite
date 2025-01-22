@@ -347,11 +347,15 @@ button img:hover {
 }
 
 .quick-link-item {
-    text-align: center;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* ทำให้เนื้อหาภายในจัดตาม Flexbox */
+    flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
+    justify-content: space-between; /* กระจายเนื้อหา */
+    align-items: center; /* จัดไอเท็มให้อยู่ตรงกลาง */
+    text-align: center; /* ข้อความจัดกึ่งกลาง */
+    border-radius: 10px; /* มุมโค้งมน */
+    padding: 15px; /* เพิ่มระยะห่างภายใน */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
+    height: 100%; /* ให้สูงสุดเท่ากัน */
 }
 
 
