@@ -278,13 +278,14 @@ button img:hover {
 
 .login-link-link:hover img {
     transform: translateY(-2px); /* ยกภาพขึ้นเล็กน้อย */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนแปลง */
 }
 
 .login-link-link img {
     display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม transition เพื่อให้ดูนุ่มนวล */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -338,19 +339,21 @@ button img:hover {
     transform: translateY(-5px); /* ขยับขึ้น 5px เมื่อโฮเวอร์ */
 }
 
+
 .quick-links {
-    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงในแนวนอน */
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-    flex-wrap: wrap; /* ถ้าพื้นที่ไม่พอให้ขึ้นบรรทัดใหม่ */
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .quick-link-item {
     text-align: center;
     transition: transform 0.3s ease;
-    border-radius: 10px; /* ทำให้มุมกลม */
-    padding: 20px; /* เพิ่มระยะห่างระหว่างขอบกรอบและเนื้อหา */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .quick-link-item:hover {
     transform: translateY(-5px);
